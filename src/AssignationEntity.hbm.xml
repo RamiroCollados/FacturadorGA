@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class entity-name="persistence.AssignationEntity" table="ASSIGNATIONS">
+      <meta attribute="class-description">
+         This class contains the People detail. 
+      </meta>
+      
+      <id name="idProject" type="int" column="IDPROJECT">
+         <generator class="native"/>
+      </id>
+      <id name="idPerson" type="int" column="IDPERSON">
+         <generator class="native"/>
+      </id>
+      
+      <property name="beginDate" column="BEGINDATE" type="date"/>
+      <property name="endDate" column="ENDDATE" type="date"/>
+      <property name="hours" column="HOURS" type="double"/>
+      <property name="hourValue" column="HOURVALUE" type="double"/>
+   </class>
+</hibernate-mapping>

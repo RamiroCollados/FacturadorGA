@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration">
+<hibernate-mapping>
+  <class entity-name="persistence.PersonEntity" table="PEOPLE">
+      <meta attribute="class-description">
+         This class contains the People detail. 
+      </meta>
+      
+      <id name="idPerson" type="int" column="IDPERSON">
+         <generator class="native"/>
+      </id>
+      
+      <property name="personName" column="NAME" type="string"/>
+      <property name="category" column="CATEGORY" type="string"/>
+      <property name="hours" column="HOURS" type="double"/>
+      <property name="hourCost" column="HOURCOST" type="double"/>
+      <property name="distributionType" column="DISTRIBUTIONTYPE" type="char"/>
+      <property name="status" column="STATUS" type="char"/>
+   </class>
+</hibernate-mapping>

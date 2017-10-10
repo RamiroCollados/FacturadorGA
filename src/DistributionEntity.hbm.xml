@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="persistence.DistributionEntity" table="DISTRIBUTION"/>
+  
+    <composite-id>
+        <key-property name="idPerson" column="IDPERSON"/> 
+        <key-property name="idProject" column="IDPROJECT"/>
+    </composite-id>
+  
+    <property name="effectivedate" column="EFFECTIVEDATE" type="date"/>
+    <property name="hours" column="HOURS" type="double"/>
+    <property name="value" column="VALUE" type="double"/>
+    <property name="cost" column="COST" type="double"/>
+    <property name="currency" column="CURRENCY" type="string"/>
+    <property name="amount" column="AMOUNT" type="double"/>     
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="persistence.ProjectEntity" table="PROJECTS">
+        <meta attribute="class-description">
+             This class contains the People detail. 
+        </meta>
+        
+        <id name="idProject" type="int" column="IDPROJECT">
+         <generator class="native"/>
+      </id>
+        
+        <property name="idClient" column="IDCLIENT" type="int"/>
+        <property name="beginDate" column="BEGINDATE" type="date"/>
+        <property name="endDate" column="ENDDATE" type="date"/>
+        <property name="amount" column="AMOUNT" type="double"/>
+        <property name="hours" column="HOURCOST" type="double"/>
+        <property name="hourValue" column="HOURVALUE" type="double"/>
+        <property name="status" column="STATUS" type="char"/>
+        <property name="exclusivity" column="EXCLUSIVITY" type="char"/>
+   </class>
+</hibernate-mapping>
